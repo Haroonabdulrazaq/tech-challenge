@@ -1,9 +1,20 @@
+import React from 'react'
+import useFetch from './useFetch.js';
+import Category from './Category.js';
+import Loading from './Loading.js';
+
 import '../styles/App.scss';
 
 function App() {
+  const { loader, data, error } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Categories')
+  console.log('Response in App', data);
+
   return (
     <div className="App">
-     Hello worldly
+      {
+        loader? <Loading/>:
+      <Category categories={data.responseData} />
+      }
     </div>
   );
 }
