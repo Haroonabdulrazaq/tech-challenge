@@ -1,12 +1,10 @@
 import React from 'react'
-import useFetch from './useFetch.js';
 import Loading from './Loading.js';
 
+import '../styles/category.scss'
 
-const People = () => {  
-  const {loader, data } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Swapi/People')
-
-  const people = data.responseData
+const People = (props) => {  
+  const {people, loader} = props
   console.log('My people Result', people);
 
   if(loader){
@@ -14,9 +12,9 @@ const People = () => {
   }
   return (
     <div className='category-wrapper'>
-      <h2 className='header-2'>All People</h2>
+      {/* <h2 className='header-2'>All People</h2> */}
       <div className='container'>
-        {people.map((person)=>(
+      {people.map((person)=>(
           <div to={`/categories/${person.name}`} className='category' key={person.url}>
             <p className='cat-name'>{person.name}</p>
             <div className='cat-info'>

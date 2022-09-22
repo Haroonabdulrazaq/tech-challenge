@@ -1,0 +1,39 @@
+@import "../styles/mediaQuery.scss";
+@import "../styles/utils.scss";
+
+.nav-wrapper {
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .nav-content {
+    width: 50%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive(tab) {
+      width: 50%;
+    }
+    @include responsive(large-screen) {
+      width: 30%;
+    }
+
+    .nav-link {
+      font-size: 1.5rem;
+
+      @include responsive(tab) {
+        font-size: 2.5rem;
+      }
+      @include responsive(large-screen) {
+        font-size: 45rem;
+      }
+    }
+  }
+}
