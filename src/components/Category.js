@@ -1,10 +1,18 @@
 
 const Category = (props) => {
-  console.log('I am data props', props)
+  const {categories} =  props
+  console.log('Categoreis in Props', categories);
   return (
-    <div>{
-      
-      }</div>
+    <>
+      <h2>All Categories</h2>
+      <div>
+        {
+          categories.map((category)=>(
+          <div key={category.id}>{category.categoryName}</div>
+          ))
+        }
+      </div>
+    </>
   )
 }
 

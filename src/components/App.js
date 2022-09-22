@@ -6,8 +6,7 @@ import Loading from './Loading.js';
 import '../styles/App.scss';
 
 function App() {
-  const { loader, data, error } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Categories')
-  console.log('Response in App', data);
+  const { loader, data } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Categories')
 
   return (
     <div className="App">
