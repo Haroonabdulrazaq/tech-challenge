@@ -1,3 +1,6 @@
+@import "../styles/mediaQuery.scss";
+@import "../styles/utils.scss";
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -12,7 +15,23 @@ body {
   font-family: 'Roboto Slab', serif;
   line-height: 1.7;
   box-sizing: border-box;
+  background: $gray;
+  padding: 0 2%;
+
+  @include responsive(tab) {
+    padding: 0 5%;
+  }
+  @include responsive(desktop) {
+    padding: 0 10%;
+  }
+  @include responsive(large-screen) {
+    padding: 0 15%;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    color: $dark-gray
+  }
 }
+
 
 .App {
   min-height: 100vh;
