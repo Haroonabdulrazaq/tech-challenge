@@ -4,6 +4,8 @@ function useFetch(url){
   const [loader, setLoader] = useState(true)
   const [data, setData] = useState([])
   const [people, setPeople] = useState([])
+  const [film, setFilm] = useState([])
+
 
   const [error, setError] = useState('')
 
@@ -24,13 +26,14 @@ function useFetch(url){
       setLoader(false)
       data.responseData && setData(data)
       data.responseData.results && setPeople(data.responseData.results)
+      data.responseData && setFilm(data)
     })
     .catch((error)=>{
       setLoader(false)
-      setError('Oops, An error occured', error.message)
+      setError('Oops, An error occured', error)
     })
   }, [url])
-  return {loader, data, people, error}
+  return {loader, data, people, film, error}
 } 
 
 export default useFetch;

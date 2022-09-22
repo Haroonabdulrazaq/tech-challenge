@@ -8,7 +8,7 @@ const Categories = (props) => {
   console.log('Categoreis in Props', categories);
   return (
     <div className='category-wrapper'>
-      <h2 className='header-2'>All </h2>
+      <h2 className='header-2'>All Categories</h2>
       <div className='container'>
         {
           categories.map((category)=>(

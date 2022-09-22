@@ -14,7 +14,7 @@ import '../styles/App.scss';
 function App() {
   const { people } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Swapi/People')
   const { loader, data } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Categories')
- 
+
   return (
     <div className="App">
       <Nav/>

@@ -1,0 +1,45 @@
+@import "../styles/mediaQuery.scss";
+@import "../styles/utils.scss";
+
+table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 0 auto;
+
+  @include responsive(tab){
+    width: 90%;
+    margin: 0 auto;
+  }
+  @include responsive(desktop){
+    width:80%;
+    margin: 0 auto;
+  }
+  @include responsive(large-screen){
+    width:80%;
+  }
+}
+
+td, th {
+  border: 1px solid $table-bg;
+  text-align: left;
+  margin: 0 auto;
+  padding: 8px;
+  font-size: 1.5rem;
+  @include responsive(large-screen){
+    width: 20rem;
+    height: auto;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: $table-bg;
+}
+tr:nth-child(odd) {
+  background-color: $gray;
+}
+tr:hover {
+	opacity: 0.8;
+  cursor: pointer;
+}
