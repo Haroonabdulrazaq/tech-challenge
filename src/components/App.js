@@ -4,8 +4,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import useFetch from './useFetch.js';
 import Categories from './Categories.js';
 import Category from './Category.js';
-
+import People from './People.js';
 import Loading from './Loading.js';
+
 
 import '../styles/App.scss';
 
@@ -20,7 +21,8 @@ function App() {
         <Route exact path="/categories">
           <Categories categories={data.responseData} />
         </Route>
-        <Route exact={true} path="/categories/:categoryName" component={Category} /> 
+        <Route exact={true} path="/people" component={People} />
+        <Route exact={true} path="/categories/:categoryName" component={Category} />
       </Switch>
       }
     </BrowserRouter>
