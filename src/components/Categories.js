@@ -10,7 +10,7 @@ const Categories = (props) => {
     <div className='category-wrapper'>
       <h2 className='header-2'>All Categories</h2>
       <div className='container'>
-        {
+        { categories &&
           categories.map((category)=>(
           <Link to={`/categories/${category.categoryName}`} className='category' key={category.id}>
             <p className='cat-name'>{category.categoryName}</p>

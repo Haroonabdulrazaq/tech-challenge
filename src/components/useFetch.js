@@ -4,7 +4,6 @@ function useFetch(url){
   const [loader, setLoader] = useState(true)
   const [data, setData] = useState([])
   const [people, setPeople] = useState([])
-  const [film, setFilm] = useState([])
   const [list, setList] = useState([])
   const [error, setError] = useState('')
 
@@ -21,19 +20,19 @@ function useFetch(url){
     fetchData()
     .then((response)=> response.json())
     .then((data)=>{
-      console.log('Data', data.responseData);
+      console.log('SearchResult', data.responseData);
       setLoader(false)
       data.responseData && setData(data)
       data.responseData.results && setPeople(data.responseData.results)
-      data.responseData && setFilm(data)
-      data.responseData && setList(data)
+      data.responseData && setList(data.responseData.searchResult.result)
     })
     .catch((error)=>{
       setLoader(false)
       setError('Oops, An error occured', error)
     })
   }, [url])
-  return { loader, data, people, film, list, error}
+  console.log('Data in Fetch', data);
+  return { loader, data, people, list, error}
 } 
 
 export default useFetch;

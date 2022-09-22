@@ -1,11 +1,85 @@
-
+@import "../styles/mediaQuery.scss";
+@import "../styles/utils.scss";
 
 .search-wrapper {
-  border: 1px solid red;
   min-height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  form{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      font-size: 1.5rem;
+      color: $dark-gray;
+      width: 70%;
+      height: 5rem;
+      border-radius: 0.6rem;
+      outline: none;
+      border: none;
+      padding: 0 2rem;
+      margin-bottom: 2rem;
+      transition: width .3s ease-in-out;
+
+      @include responsive(tab) {
+        width: 40%;
+        font-size: 2.5rem;
+      }
+      @include responsive(desktop) {
+        width: 40%;
+        font-size: 3rem;
+      }
+    }
+    input:focus {
+      width: 90%;
+      border: 1px solid $table-bg;
+      @include responsive(tab) {
+          width: 50%;
+      }
+    }
+  }
+
+  .search-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    width: 90%;
+    height: auto;
+    
+    @include responsive(tab) {
+      width: 80%;
+    }
+    @include responsive(desktop) {
+      width: 80%;
+    }
+
+    .search {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 0.6rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid $table-bg;
+      background-color: white;
+      box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd;
+      font-size: 1.5rem;
+      cursor: pointer;
+      @include responsive(tab) {
+        width: 50%;
+        font-size: 2rem;
+      }
+      @include responsive(desktop) {
+          width: 50%;
+      }
+      @include responsive(large-screen) {
+          font-size: 3rem;
+      }
+    }
+  }
 }

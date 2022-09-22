@@ -2,15 +2,24 @@ import React from 'react'
 import '../styles/search.scss'
 
 const Search = (props) => {
-  const {handleChange, search} = props
+  const {lists, handleChange, search} = props
+
+  console.log('SearchResult in search', lists);
 
   return (
     <div className='search-wrapper'>
       <form>
-        <input type='text' value={search} onChange={handleChange} />
+        <input type='text' placeholder='Search' value={search} onChange={handleChange} />
       </form>
+      <div className='search-result'>
+        { search &&
+          lists.map((list)=>(
+            <div className='search' key={list.id}>{list.value}</div>
+          ))
+        }
+      </div>
     </div>
   )
 }
 
-export default Search
+export default Search;

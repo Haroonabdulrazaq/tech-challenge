@@ -23,7 +23,7 @@ const People = (props) => {
           <th>Hair Color</th>
           <th>No of Vehicle</th>
         </tr>
-        {people.map((person) => {
+        {people && people.map((person) => {
           return (
             <tr key={person.url}>
               <td>{person.name}</td>

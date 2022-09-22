@@ -7,18 +7,17 @@ import Nav from './Nav.js';
 import Category from './Category.js';
 import Search from './Search.js';
 import People from './People.js';
+import Error from './Error.js';
 import Loading from './Loading.js';
-
 
 import '../styles/App.scss';
 
 function App() {
   const [search, setSearch] = useState('')
 
+  const { list, error } = useFetch(`https://chuckswapi20220921081349.azurewebsites.net/api/Search/Search/${search}`)
   const { people } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Swapi/People')
   const { loader, data } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Categories')
-  const { list } = useFetch(`https://chuckswapi20220921081349.azurewebsites.net/api/Search/Search/${search}`)
-
 
   const handleChange = (e) => {
     console.log(e.target.value)
@@ -26,21 +25,24 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className='App'>
       <Nav/>
       {
         loader? <Loading/>:
       <Switch>
-        <Route exact path="/">
-              <Search list={list} search={search} handleChange={handleChange} />
+        <Route exact path='/'>
+          <Search lists={list} search={search} handleChange={handleChange} />
         </Route>
-        <Route exact path="/people">
+        <Route exact path='/people'>
           <People people={people} loader={loader} />
         </Route>
-        <Route exact path="/categories">
+        <Route exact path='/categories'>
           <Categories categories={data.responseData} />
         </Route>
-        <Route exact={true} path="/categories/:categoryName" component={Category} />
+        <Route exact={true} path='/categories/:categoryName' component={Category} />
+        <Route exact path='*'>
+          <Error error={error} />
+        </Route>
       </Switch>
       }
     </div>
