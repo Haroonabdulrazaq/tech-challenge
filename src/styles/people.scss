@@ -12,8 +12,9 @@ table {
     width: 90%;
     margin: 0 auto;
   }
+  
   @include responsive(desktop){
-    width:80%;
+    width: 80%;
     margin: 0 auto;
   }
   @include responsive(large-screen){
@@ -27,6 +28,11 @@ td, th {
   margin: 0 auto;
   padding: 8px;
   font-size: 1.5rem;
+
+  @include responsive(desktop){
+    width: 15rem;
+    height: auto;
+  }
   @include responsive(large-screen){
     width: 20rem;
     height: auto;

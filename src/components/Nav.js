@@ -6,7 +6,7 @@ import '../styles/nav.scss'
 const Nav = () => {
   return (
     <div className='nav-wrapper'>
-      <h3>Tech Challenge</h3>
+      <h3><Link to='/' className='nav-link'>Tech Challenge</Link></h3>
       <div className='nav-content'> 
         <Link to='/' className='nav-link'>Home</Link>
         <Link to='/categories' className='nav-link' >Categories</Link>

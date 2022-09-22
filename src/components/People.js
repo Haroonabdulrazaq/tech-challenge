@@ -1,15 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import Loading from './Loading.js';
 
 import '../styles/people.scss'
-import useFetch from './useFetch.js';
 
 const People = (props) => {  
   const {people, loader} = props
-  const [filmName, setFilmName] = useState([])
-
-  console.log('My people Result', people);
-
 
   if(loader){
     return <Loading />
