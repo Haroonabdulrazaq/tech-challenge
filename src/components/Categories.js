@@ -5,7 +5,6 @@ import '../styles/category.scss'
 
 const Categories = (props) => {
   const {categories} =  props
-  console.log('Categoreis in Props', categories);
   return (
     <div className='category-wrapper'>
       <h2 className='header-2'>All Categories</h2>
