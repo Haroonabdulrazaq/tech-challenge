@@ -26,15 +26,15 @@ function useFetch(url){
       data.responseData && setData(data)
       data.responseData.results && setPeople(data.responseData.results)
       data.responseData && setLists(data.responseData.searchResult.result)
-      data.responseMessage && setCategory(data.responseData)
+      data.responseData && setCategory(data)
     })
     .catch((error)=>{
       setLoader(false)
       setError('Oops, An error occured', error)
     })
   }, [url])
-  console.log('Data in Fetcher', category);
-  return { loader, data, people, category, lists, error}
+  console.log('Data in Fetch', data);
+  return { loader, data, people, lists, error}
 } 
 
 export default useFetch;

@@ -18,7 +18,6 @@ function App() {
   const { lists, error } = useFetch(`https://chuckswapi20220921081349.azurewebsites.net/api/Search/Search/${search}`)
   const { people } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Swapi/People')
   const { loader, data } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Categories')
-  const { category } = useFetch('https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Category/dev')
 
 
   const handleChange = (e) => {
@@ -41,9 +40,7 @@ function App() {
         <Route exact path='/categories'>
           <Categories categories={data.responseData} />
         </Route>
-        <Route exact path='/categories/:categoryName'>
-          <Category category={category} />
-        </Route>
+        <Route exact path='/categories/:categoryName' component={Category} />
         <Route exact path='*'>
           <Error error={error} />
         </Route>

@@ -41,3 +41,39 @@
 
   }
 }
+
+.button {
+  border-radius: 0.3rem;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: $gray;
+  border: 1px solid $dark-gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 4;
+
+  @include responsive(tab) {
+    top: 10rem;
+    padding: 1rem 2.5rem;
+    height: 5.5vh;
+  }
+}
+
+.button:hover {
+  background: linear-gradient(to bottom right, $dark-gray, $text-gray 0%, $gray 80%);
+  color: black;
+}
+
+.back-arrow {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}

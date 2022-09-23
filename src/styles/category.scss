@@ -70,3 +70,49 @@
     }
   }
 }
+
+.main {
+  width: 100%;
+  min-height: 90vh;
+  padding-top: 2rem;
+  
+  .card {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.6rem;
+    background: $white;
+    box-shadow: $shadow;
+
+    @include responsive(tab) {
+      width: 50%;
+    }@include responsive(desktop) {
+      width: 40%;
+    }@include responsive(large-screen) {
+      width: 30%;
+    }
+
+    .img-container {
+      background: url("../img/Error.png") no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-clip: padding-box;
+    }
+    .card-text{
+      padding: 0 1rem 1rem;
+      font-size: 1.5rem;
+      @include responsive(tab){
+        font-size: 2rem;
+      }
+      @include responsive(desktop){
+        font-size: 2.5rem;
+      } @include responsive(large-screen){
+        font-size: 4rem;
+      }
+    }
+  }
+}
