@@ -7,7 +7,7 @@
 
 ## :camera: Screenshot
 
-![Screenshot](/src/img/tech-challenge.png)
+![Screenshot](./src/img/tech-challenge.png)
 
 ## :rocket: Live Demo
 
