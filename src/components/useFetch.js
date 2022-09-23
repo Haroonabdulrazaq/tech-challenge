@@ -32,7 +32,7 @@ function useFetch(url){
       setError('Oops, An error occured', error)
     })
   }, [url])
-  return { loader, data, people, lists, category, error}
+  return { loader, data, people, lists, error}
 } 
 
 export default useFetch;
