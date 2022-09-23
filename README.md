@@ -1,9 +1,17 @@
 # Technical Challenge
 
-## Tools
+## Tools :trench:
 
 - Reactjs
 - SCSS
+
+## :camera: Screenshot
+
+![Screenshot](/img/tech-challenge.PNG)
+
+## :rocket: Live Demo
+
+[LIVE DEMO LINK](https://haroonabdulrazaq.github.io/tech-challenge/)
 
 ## Getting Started
 
@@ -19,3 +27,7 @@
 - /people
 - /categories
 - /categories/{categoryName}
+
+## Contributor :nerd_face:
+
+[Haroon Abdulrazaq](http://haroonabdulrazaq.tech/)
