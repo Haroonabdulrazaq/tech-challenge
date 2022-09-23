@@ -1,6 +1,6 @@
 # Technical Challenge
 
-## Tools :trench:
+## Tools :hammer_and_wrench:
 
 - Reactjs
 - SCSS
