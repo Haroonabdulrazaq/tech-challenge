@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/tech-challenge/static/css/main.1114f5da.css",
+    "main.js": "/tech-challenge/static/js/main.1eb7d3f7.js",
+    "static/media/Error.png": "/tech-challenge/static/media/Error.284ee4082ab6bfd372bd.png",
+    "index.html": "/tech-challenge/index.html",
+    "main.1114f5da.css.map": "/tech-challenge/static/css/main.1114f5da.css.map",
+    "main.1eb7d3f7.js.map": "/tech-challenge/static/js/main.1eb7d3f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1114f5da.css",
+    "static/js/main.1eb7d3f7.js"
+  ]
+}
