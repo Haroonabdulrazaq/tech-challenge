@@ -21,7 +21,6 @@ function App() {
 
 
   const handleChange = (e) => {
-    console.log(e.target.value)
     setSearch(e.target.value)
   }
 

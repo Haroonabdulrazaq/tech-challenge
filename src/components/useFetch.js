@@ -21,7 +21,6 @@ function useFetch(url){
     fetchData()
     .then((response)=> response.json())
     .then((data)=>{
-      console.log('SearchResult', data);
       setLoader(false)
       data.responseData && setData(data)
       data.responseData.results && setPeople(data.responseData.results)
@@ -33,8 +32,7 @@ function useFetch(url){
       setError('Oops, An error occured', error)
     })
   }, [url])
-  console.log('Data in Fetch', data);
-  return { loader, data, people, lists, error}
+  return { loader, data, people, lists, category, error}
 } 
 
 export default useFetch;

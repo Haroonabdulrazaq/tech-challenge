@@ -4,7 +4,6 @@ import '../styles/search.scss'
 const Search = (props) => {
   const {lists, handleChange, search} = props
 
-  console.log('SearchResult in search', lists);
 
   return (
     <div className='search-wrapper'>

@@ -10,9 +10,8 @@ const Category = (props) => {
   const { data, loader } = useFetch(`https://chuckswapi20220921081349.azurewebsites.net/api/Chuck/Category/${categoryName}`)
 
   const category = data.responseData
-  // console.log('Cat', category.icon_url);
 
- if(category === undefined) {
+ if(category === undefined || loader) {
   <Loading />
  }
   return (
